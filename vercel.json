@@ -8,7 +8,8 @@
   ],
   "functions": {
     "api/analyze.py": {
-      "maxDuration": 10
+      "maxDuration": 10,
+      "excludeFiles": "{node_modules/**,.venv/**,.vercel/**,dist/**,src/**,tests/**,app.py,main.py,render_server.py,render.yaml,index.html,vite.config.js,package.json,package-lock.json,requirements.txt,pyproject.toml,*.md,.git/**,**/__pycache__/**,api/dev_server.py}"
     }
   }
 }

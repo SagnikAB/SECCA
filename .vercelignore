@@ -1,7 +1,13 @@
 .venv/
+.vercel/
 __pycache__/
 *.py[cod]
 .pytest_cache/
 node_modules/
 dist/
 *.log
+tests/
+app.py
+main.py
+render_server.py
+render.yaml
