@@ -1,0 +1,17 @@
+[project]
+name = "secure-enterprise-contract-agent"
+version = "1.0.0"
+description = "Secure multi-agent contract and compliance assessment demo."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.7,<3",
+    "mcp>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
