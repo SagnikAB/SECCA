@@ -52,6 +52,7 @@ core/security_engine.py      validation and hostile-input guardrails
 mcp_server/compliance_mcp.py custom MCP service and optional FastMCP server
 utils/observability.py       structured JSON observability
 main.py                      runnable demonstration lifecycle
+app.py                       Streamlit enterprise review interface
 tests/                       security and workflow regression tests
 ```
 
@@ -67,6 +68,16 @@ python main.py
 ```
 
 The application prints JSON trace records to stderr and a final machine-readable compilation report to stdout. The included example deliberately contains a prohibited vendor and an excessive liability cap, so the final verdict is a rejection.
+
+## Interactive UI
+
+Launch the local review console with:
+
+```powershell
+streamlit run app.py
+```
+
+The browser UI provides sample contracts, a contract editor, a compliance-finding view, USD exposure calculation, and a downloadable JSON audit trail. It uses exactly the same security gate, MCP service, agent graph, and trace events as the command-line application.
 
 Run the regression suite with:
 
