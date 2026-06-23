@@ -71,7 +71,38 @@ The application prints JSON trace records to stderr and a final machine-readable
 
 ## Interactive UI
 
-Launch the local review console with:
+### Vite web console (recommended)
+
+Build the frontend and run the secure assessment API locally:
+
+```powershell
+npm install
+pip install -r api/requirements.txt
+npm run api
+```
+
+In a second terminal:
+
+```powershell
+npm run dev
+```
+
+Open `http://127.0.0.1:5173`. Vite proxies `/api` requests to the local Flask handler on port 5000.
+
+### Deploy on Vercel
+
+The Vite app builds to `dist/` and the Python workflow runs as a serverless function at `/api/analyze`.
+
+```powershell
+npm install
+npx vercel
+```
+
+Or connect the [SECCA](https://github.com/SagnikAB/SECCA) repository in the Vercel dashboard. Vercel runs `npm ci`, installs `api/requirements.txt`, builds with Vite, and serves the static UI from `dist/`.
+
+### Streamlit console
+
+Launch the alternate Streamlit review console with:
 
 ```powershell
 streamlit run app.py

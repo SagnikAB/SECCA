@@ -1,4 +1,4 @@
-"""Production entry point serving the Vite app and contract-analysis API."""
+"""Render production entry point serving the Vite app and contract-analysis API."""
 
 from __future__ import annotations
 

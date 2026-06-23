@@ -14,6 +14,7 @@ app = Flask(__name__)
 
 
 @app.post("/api/analyze")
+@app.post("/")
 def analyze():
     """Run the guarded contract workflow and return only safe review data."""
     payload = request.get_json(silent=True) or {}
